@@ -1,0 +1,57 @@
+<form #addForm="ngForm" (ngSubmit)="postRecipe(addForm)">
+  <div class="form-group">
+    <label>Name:</label>
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      [(ngModel)]="name"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label>Description:</label>
+    <input
+      type="text"
+      class="form-control"
+      name="description"
+      [(ngModel)]="description"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label>Tags:</label>
+    <input
+      type="text"
+      class="form-control"
+      name="tags"
+      [(ngModel)]="tags"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label>Ingredients:</label>
+    <input
+      type="text"
+      class="form-control"
+      name="ingredients"
+      [(ngModel)]="ingredients"
+      required
+    />
+  </div>
+  <button>Add!</button>
+</form>
+
+<form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)">
+  <div *ngIf="tags?.length > 0">
+    <select name="tagselector" [(ngModel)]="tagselector">
+      <option *ngFor="let tag of tags" value="{{ tag.tag }}">{{
+        tag.tag
+      }}</option>
+    </select>
+    <br />
+    <button class="btn btn-light mb-3">
+      Search
+    </button>
+  </div>
+</form>

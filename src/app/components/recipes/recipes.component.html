@@ -1,0 +1,21 @@
+<h2>Search for a meal</h2>
+<form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)">
+  <div *ngIf="tags?.length > 0">
+    <select name="tagselector" [(ngModel)]="tagselector">
+      <option *ngFor="let tag of tags" value="{{ tag.tag }}">{{
+        tag.tag
+      }}</option>
+    </select>
+    <br />
+    <button class="btn btn-light mb-3">
+      Search
+    </button>
+  </div>
+</form>
+
+<div *ngIf="recipes?.length > 0">
+  <ul *ngFor="let recipe of recipes">
+    <li>{{ recipe.name }}</li>
+    <li>{{ recipe.description }}</li>
+  </ul>
+</div>
