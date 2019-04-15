@@ -1,3 +1,6 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/arock95/RecipesUI/badge.svg?targetFile=package.json)](https://snyk.io/test/github/arock95/RecipesUI?targetFile=package.json)
+
+
 # RecipeUI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
